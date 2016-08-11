@@ -2,4 +2,4 @@
 
 Related: http://www.phpied.com/custom-animated-cursor-via-canvas/
 
-![Image of PoC](https://raw.githubusercontent.com/lintaba/cursor-escape-browser/master/demo.jpg)
+![Image of PoC](https://raw.githubusercontent.com/lintaba/cursor-escape-browser/master/demo.png)
