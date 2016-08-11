@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<script>
+var lock = new Image()
+lock.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAIAAABVH8vfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVDhPY/hPJTBSDNp0/YjFjDTuBmc8SHNCFFAZVAMSQDFIoz8STRtWBLQMqgEJoBiErDpncx9UFAyAXGRZqCgSwGkQkNuyfwGEDWRgyqIBfAbh56IBGht06cUdqBASuPj8NlwBVAgJYDcIyscAeBQQMAgrF1kEDuhlEBrAo4CEwAYKwhVAhZAAikFEZhHz6alQDUgAxSBgbgQqQtOGhoCWEc60lIBha9D//wA4ff7l7k/WdgAAAABJRU5ErkJggg=="
+
+
+var canvas = document.createElement('canvas');
+canvas.width = canvas.height = 128;
+var ctx = canvas.getContext('2d');
+var pos = {x:0,y:0};
+
+function clock(){
+  ctx.clearRect(0,0,512,512);
+
+  var x = window.screenX + 110 - pos.x,
+      y = window.screenY + 95 - pos.y
+
+     ctx.drawImage(lock,x,y);
+
+    document.documentElement.style.cursor = 'url(' + canvas.toDataURL() + ') 512 512, auto';
+
+}
+
+document.addEventListener("mousemove",function(e){
+    pos.x = e.clientX;
+    pos.y = e.clientY;
+    clock();
+},false);
+
+</script>
+<body>
+Wow, a certificate on a local file. Must be legit...
+</body>
